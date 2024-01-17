@@ -45,3 +45,9 @@ for(let squad of squadsList){
     squad.score = getRandomNumber(1, 100);
     squad.errors = getRandomNumber(1, 50);
 };
+
+
+
+const squadOnlyErrors = squadsList.map(({name, errors}) => ({name, errors}));
+
+console.log(squadOnlyErrors)
