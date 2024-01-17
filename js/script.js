@@ -38,3 +38,13 @@ const studentList = [
     },
 
 ];
+
+
+const over70Vote = studentList.filter(({grades}) => grades > 70);
+
+const over70VoteOver120Id = studentList.filter(({id,grades}) => grades > 70 && id > 120);
+
+const upperCaseNames = studentList.map(({name}) => name.toUpperCase());
+
+console.log(over70Vote, over70VoteOver120Id, upperCaseNames);
+

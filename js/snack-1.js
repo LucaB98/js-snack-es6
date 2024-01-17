@@ -1,6 +1,6 @@
 // SNACK 1
 // TAVOLO VIP
-const tableName = 'Tavolo Vip';
+const table = 'Tavolo Vip';
 // LISTA DEGLI INVITATI
 const guests = [
   'Brad Pitt',
@@ -16,12 +16,6 @@ const guests = [
 ];
 
 
-const guestsList = guests.map((guest, index) => {
- return  {
-        table: tableName,
-        name: guest,
-        seatNumber: index + 1
-    };
-});
+const guestsList = guests.map((name, index) => ({table, name, seatNumber: index + 1}));
 
 console.log(guestsList)
