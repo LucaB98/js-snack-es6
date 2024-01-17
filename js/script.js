@@ -1,4 +1,10 @@
 // SNACK 4
+// FUNZIONI
+
+const getRandomNumber = (min, max) => {
+return Math.floor(Math.random()*(max - min + 1) + min)};
+
+
 
 // CREO UN ARRAY DI SQUADRE DA CALCIO
 
@@ -38,4 +44,4 @@ const squadsList = [
 for(let squad of squadsList){
     squad.score = getRandomNumber(1, 100);
     squad.errors = getRandomNumber(1, 50);
-}
+};
