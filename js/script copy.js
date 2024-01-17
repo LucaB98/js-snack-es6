@@ -42,9 +42,15 @@ const studentList = [
 
 const over70Vote = studentList.filter(({grades}) => grades > 70);
 
-const over70VoteOver120Id = studentList.filter(({id,grades}) => grades > 70 && id > 120);
+const over70VoteOver120Id = over70Vote.filter(({id}) => id > 120);
 
 const upperCaseNames = studentList.map(({name}) => name.toUpperCase());
+
+let items = '';
+
+upperCaseNames.forEach(({name}) => {
+    items += `<li>${name}</li>`
+});
 
 console.log(over70Vote, over70VoteOver120Id, upperCaseNames);
 
