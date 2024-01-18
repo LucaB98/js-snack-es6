@@ -25,9 +25,12 @@ const bikesList = [
     }
 ];
 
+const getLowerstItem = (arr, key) => arr.reduce((result, item) => item[key] < result[key] ? item : result ,arr[0]);
 
-const {name: minWeightBikeName, weight: minWeight} = bikesList.reduce((min, bike) => (bike.weight < min.weight ? bike : min), bikesList[0]);
+const lightest = getLowerstItem( bikesList, 'weight');
 
-console.log(`La bici più leggera è ${minWeightBikeName} con un peso di ${minWeight} kg`);
+console.log(lightest)
+    
+
 
      
