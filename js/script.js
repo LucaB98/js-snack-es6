@@ -1,8 +1,7 @@
 // SNACK 4
 // FUNZIONI
 
-const getRandomNumber = (min, max) => {
-return Math.floor(Math.random()*(max - min + 1) + min)};
+const getRandomNumber = (min, max) => Math.floor(Math.random()*(max - min + 1) + min);
 
 
 
@@ -41,11 +40,15 @@ const squadsList = [
     },
 ];
 
-for(let squad of squadsList){
+// for(let squad of squadsList){
+//     squad.score = getRandomNumber(1, 100);
+//     squad.errors = getRandomNumber(1, 50);
+// };
+
+squadsList.forEach(squad => {
     squad.score = getRandomNumber(1, 100);
     squad.errors = getRandomNumber(1, 50);
-};
-
+});
 
 
 const squadOnlyErrors = squadsList.map(({name, errors}) => ({name, errors}));
